@@ -1,17 +1,23 @@
-# from selenium import webdriver
-# from bs4 import BeautifulSoup as bs
-# import pandas as pd
-# import time 
+from selenium import webdriver
+from bs4 import BeautifulSoup as bs
+import pandas as pd
+import time 
 
-# driver = webdriver.Chrome()
-# url = 'https://animemotivation.com/avatar-the-last-airbender-quotes/'
+driver = webdriver.Chrome()
+url = 'https://animemotivation.com/avatar-the-last-airbender-quotes/'
 
-# driver.get(url)
+driver.get(url)
 
-# page_html = driver.page_source
-# soup = bs(page_html, 'html.parser')
-# blockquote_tags = soup.find_all('blockquote')
-# p_tags = blockquote_tags.find('p')
+page_html = driver.page_source
+soup = bs(page_html, 'html.parser')
+blockquote_tags = soup.find_all('blockquote')
+
+quotes = []
+for p_tag in blockquote_tags:
+    quotes.append(p_tag.text)
+print(quotes)
+#p_tags = soup.find_all('p')
+
 
 # quotes, character_names = [], []
 
