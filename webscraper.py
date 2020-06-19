@@ -1,7 +1,8 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup as bs
 import pandas as pd
-import time 
+import re
+import os
 
 driver = webdriver.Chrome()
 url = 'https://animemotivation.com/avatar-the-last-airbender-quotes/'
@@ -15,16 +16,29 @@ blockquote_tags = soup.find_all('blockquote')
 quotes = []
 for p_tag in blockquote_tags:
     quotes.append(p_tag.text)
-print(quotes)
-#p_tags = soup.find_all('p')
 
+parsed_quotes = []
+range_quotes = range(len(quotes))
+for i in range_quotes:
+    parsed_quotes.append(quotes[i].rsplit(" – ", 1))
 
-# quotes, character_names = [], []
+author, text = [], []
+for i in range_quotes:
+    try:
+        author.append(parsed_quotes[i][1])
+        text.append(parsed_quotes[i][0])
+    # One of Aang's quotes does not credit Aang as the author 
+    except:
+        author.append('Aang')
+        text.append(parsed_quotes[i][0])
 
-# for section in blockquote_tags:
-#     quotes.append(section.text)
+columns_dict = {'text':text, 'author':author}
+df = pd.DataFrame(data=columns_dict)
 
-# columns_dict = {'quote':blockquote_tags}
-# df = pd.DataFrame(data=columns_dict)
+def create_csv():
+    if not os.path.exists('data/ATLA_quotes.csv'):
+        df.to_csv('data/ATLA_quotes.csv')
+        print('ATLA_quotes.csv created in data folder')
+    return None
 
-# df.to_csv('../data')
+create_csv()
