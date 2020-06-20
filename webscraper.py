@@ -32,13 +32,16 @@ for i in range_quotes:
         author.append('Aang')
         text.append(parsed_quotes[i][0])
 
-columns_dict = {'text':text, 'author':author}
+columns_dict = {'author':author, 'text':text}
 df = pd.DataFrame(data=columns_dict)
 
 def create_csv():
+    """Creates a csv in the data directory."""
+
     if not os.path.exists('data/ATLA_quotes.csv'):
-        df.to_csv('data/ATLA_quotes.csv')
         print('ATLA_quotes.csv created in data folder')
-    return None
+        return df.to_csv('data/ATLA_quotes.csv')
+    else:
+        return print('Error')
 
 create_csv()
