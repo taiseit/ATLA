@@ -33,9 +33,5 @@ def next_row():
     for row in c.fetchall():
         print(row)
 
-create_table()
-import_data()
-next_row()
-
 conn.commit()
 conn.close()
