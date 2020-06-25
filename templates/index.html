@@ -11,12 +11,18 @@
         
             <div class="content">
                 <p>
-                    {{ quotes.text }}
+                    {{ quote.text }}
                 </p>
                 <p>
-                    {{ quotes.author }}
+                   - {{ quote.author }}
                 </p> 
-                <a href="#" ><img class="next" src="..\static\images\airglider2.png" alt=""></a>
+                <form action="/" METHOD="POST">
+                    <input type="submit" name="hi" value="Do Something">
+                    <input type="submit" name="submit_button" value="Do Something Else">
+                </form>
+
+
+                <a href="#" METHOD="GET" ><img class="next" src="..\static\images\airglider2.png" alt=""></a>
                 <a href="#" class="prev"><img class="prev" src="..\static\images\airglider4.png" alt=""></a>
             </div>
 
