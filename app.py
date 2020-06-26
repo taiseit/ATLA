@@ -14,12 +14,13 @@ class Quotes(db.Model):
 
 @app.route('/', methods=['POST', 'GET'])
 def main_page():
-    random_int = randint(1, 54)
+    count = Quotes.query.count()
+    random_int = randint(1, count)
     if request.method == 'POST':
         quote = Quotes.query.filter_by(id = str(random_int)).first()
-        return render_template('index.html', quote=quote)
+        return render_template('index.html', quote=quote, count=count)
     else:
-       quote = Quotes.query.filter_by(id = '5').first()
+       quote = Quotes.query.filter_by(id = '1').first()
        return render_template('index.html', quote=quote)
 
 if __name__ == '__main__':
