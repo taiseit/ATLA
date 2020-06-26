@@ -19,8 +19,8 @@ def main_page():
         quote = Quotes.query.filter_by(id = str(random_int)).first()
         return render_template('index.html', quote=quote)
     else:
-        quote = Quotes.query.filter_by(id = '5').first()
-        return render_template('index.html', quote=quote)
+       quote = Quotes.query.filter_by(id = '5').first()
+       return render_template('index.html', quote=quote)
 
 if __name__ == '__main__':
     app.run(debug=True)

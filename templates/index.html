@@ -7,30 +7,18 @@
 
 </head>
 <body>
-    <div class="container">
-        
-            <div class="content">
-                <p>
-                    {{ quote.text }}
-                </p>
-                <p>
-                   - {{ quote.author }}
-                </p> 
-                <form action="/" METHOD="POST">
-                    <input type="submit" name="hi" value="Do Something">
-                    <input type="submit" name="submit_button" value="Do Something Else">
-                </form>
-
-
-                <a href="#" METHOD="GET" ><img class="next" src="..\static\images\airglider2.png" alt=""></a>
-                <a href="#" class="prev"><img class="prev" src="..\static\images\airglider4.png" alt=""></a>
-            </div>
-
+    <div class="grid-container">
+        <form action="/" class="right-button" METHOD="POST">
+            <input type="image"  class="airglider-icon" src="..\static\images\airglider4.png"> 
+        </form>
+        <div class="content">
+            <p>{{ quote.text }}</p>
+            <p> - {{ quote.author }}</p>
+        </div>
+        <form action="/" class="right-button" METHOD="POST">
+            <input type="image"  class="airglider-icon" src="..\static\images\airglider2.png"> 
+        </form>
     </div>
-    <div class="footer">
-        <a href="https://taiseit.github.io" target="_blank">taisei</a>
-    </div>
-
 </body>
 </html>
 
