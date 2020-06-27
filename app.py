@@ -12,55 +12,27 @@ class Quotes(db.Model):
     author = db.Column(db.String(50), nullable=False)
     text = db.Column(db.String(200), nullable=False)
 
-# @app.route('/', methods=['POST', 'GET'])
-# def main_page():
-#     count = Quotes.query.count()
-#     random_int = randint(1, count)
-#     if request.method == 'POST':
-#         quote = Quotes.query.filter_by(id = str(random_int)).first()
-#         return render_template('index.html', quote=quote, count=count)
-#     else:
-#        quote = Quotes.query.filter_by(id = '1').first()
-#        return render_template('index.html', quote=quote)
-
+array_index = 0
+count = 10 # Quotes.query.count()
+scramble_index = random.sample(range(1, count + 1), count)
 @app.route('/', methods=['POST', 'GET'])
 def main_page():
-    index = 0
-    count = Quotes.query.count()
-    scramble_index = random.sample(range(1, count + 1), count)
     def helper():
-        nonlocal index
-        if request.method == 'POST':
-            index += 1
-            id = str(scramble_index[index])
-            quote = Quotes.query.filter_by(id = id).first()
-            return render_template('index.html', quote=quote)
-        else:     
-            quote = Quotes.query.filter_by(id = '1').first()
-            return render_template('index.html', quote=quote)
-    return helper()
-
-condition = 0
-index = 0
-count = 10
-scramble_index = random.sample(range(1, count + 1), count)
-@app.route('/test')
-def test():
-    def helper():
-        global index
-        if abs(index) > len(scramble_index) - 2:
-            index = 0
-            print(index)
+        global array_index
+        # reset index 
+        if abs(array_index) > len(scramble_index) - 3:
+            array_index = 0
         # next button 
-        elif condition:
-            index += 1
-            print(index)
+        # requires a way to detect the right button is clicked
+        elif request.method == 'POST':
+            array_index += 1
         # previous button
+        # requires a way to detect the left button is clicked 
         else:
-            index -= 1
-            print(index)
-        x = scramble_index[index]
-        return render_template('test.html', x=x)
+            array_index -= 1
+        quote_index = str(scramble_index[array_index])
+        quote = Quotes.query.filter_by(id = quote_index).first()
+        return render_template('index.html', quote=quote)
     return helper()
 
 if __name__ == '__main__':
