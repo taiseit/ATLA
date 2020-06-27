@@ -20,7 +20,7 @@ def main_page():
     def helper():
         global array_index
         # reset index 
-        if abs(array_index) > len(scramble_index) - 3:
+        if abs(array_index) > len(scramble_index) - 2:
             array_index = 0
         # next button 
         # requires a way to detect the right button is clicked
