@@ -9,16 +9,24 @@
 <body>
     <div class="grid-container">
         <form action="/" METHOD="POST">
-            <input type="submit" name="submit_button" value="prev-button">
-            <!--<input type="image" class="airglider-icon" src="..\static\images\airglider4.png">-->
+            <input type="submit" class="left-button" name="submit_button" value="prev-button">
+            <!-- left hover icon -->
+            <img src="..\static\images\airglider4.png" class="image" alt="">
+            <div class="overlay">
+                <img src="..\static\images\airglider3.png" class="image" alt="">
+            </div>
         </form>
         <div class="content">
             <p>{{ quote.text }}</p>
             <p> — {{ quote.author }}</p>
         </div>
-        <form action="/" class="right-button" METHOD="POST">
-            <!--<input type="image" class="airglider-icon" src="..\static\images\airglider2.png">-->
-            <input type="submit" name="submit_button" value="next-button">
+        <form action="/" class="right-button"  METHOD="POST">
+            <input type="submit" class="right-button" name="submit_button" value="next-button">
+            <!-- right hover icon -->
+            <img src="..\static\images\airglider2.png" class="image" alt="">
+            <div class="overlay">
+                <img src="..\static\images\airglider1.png" class="image" alt="">
+            </div>
         </form>
     </div>
 </body>

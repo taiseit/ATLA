@@ -19,8 +19,6 @@ shuffle_index = random.sample(range(1, count + 1), count)
 def main_page():
     def helper():
         global array_index
-        x = request.args.get('button')
-        print(str(x))
         # reset index 
         if abs(array_index) > len(shuffle_index) - 2:
             array_index = 0
