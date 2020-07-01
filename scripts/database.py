@@ -14,24 +14,19 @@ def create_table():
     """)
 
 def import_data():
-    """Imports data/ATLA_quotes.csv into the quotes table if the table is empty, else return print statement."""
+    """Imports ../data/ATLA_quotes.csv into the quotes table if the table is empty, else return print statement."""
     
     c.execute('SELECT * FROM quotes')
     num_rows = len(c.fetchall())
-
+    path = '../data/ATLA_quotes.csv'
     if num_rows == 0: 
-        quotes = pd.read_csv('data/ATLA_quotes.csv')
+        quotes = pd.read_csv(path)
         quotes = quotes[['author', 'text']]
         quotes.to_sql('quotes', conn, if_exists='append', index=False)
     else:
         print('Table already contains data!')
 
-def next_row():
-    """Returns a list object containing correspon"""
-    query = 'SELECT author, text FROM quotes WHERE rowid == 1'
-    c.execute(query)
-    for row in c.fetchall():
-        print(row)
-
+create_table()
+import_data()
 conn.commit()
 conn.close()

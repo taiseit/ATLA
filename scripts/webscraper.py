@@ -35,12 +35,15 @@ for i in range_quotes:
 columns_dict = {'author':author, 'text':text}
 df = pd.DataFrame(data=columns_dict)
 
+# remove quotes of length greater than 70 words
+df = df[df['text'].str.split().str.len() <= 70]
+
 def create_csv():
     """Creates a csv in the data directory."""
-
-    if not os.path.exists('data/ATLA_quotes.csv'):
+    path = '../data/ATLA_quotes.csv'
+    if not os.path.exists(path):
         print('ATLA_quotes.csv created in data folder')
-        return df.to_csv('data/ATLA_quotes.csv')
+        return df.to_csv(path)
     else:
         return print('Error')
 
