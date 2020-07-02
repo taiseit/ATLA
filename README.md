@@ -9,12 +9,12 @@
 
 ## Inspiration
 
-## About
+## About this Project
 
 ## Images
 
 ## Acknowledgements
-Special thanks to [jinocenc](https://github.com/jinocenc) 
+Special thanks to <a href="https://github.com/jinocenc" target="_blank">jinocenc</a> for providing HTML and CSS consulting
 
 ## Contact
 Taisei Tateno - tjt@berkeley.edu
