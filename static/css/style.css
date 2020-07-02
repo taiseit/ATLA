@@ -13,10 +13,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    font-family: Herculanum, Helvetica, sans-serif;
-    color: #fff;
-    font-size: 1.5em;
 }
 
 .grid-container {
@@ -76,4 +72,42 @@ body {
     right: 20px;
     bottom: 20px;
     color: #fff;
+    font-family: Herculanum, Helvetica, sans-serif;
+    font-size: 1.5em;
 }
+
+div p {
+    font-family: Herculanum, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+    text-transform: none;
+    opacity: 0.0;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    animation-fill-mode: forwards;  
+    }
+    
+    @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
