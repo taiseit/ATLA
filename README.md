@@ -2,22 +2,33 @@
 
 ## Table of Contents
 * [Inspiration](#inspiration)
-  * [Built With](#built-with)
 * [About this Project](#about-this-project)
+  * [Built With](#built-with)
 * [Images](#images)
 * [Acknowledgments](#acknowledgements)
 * [Contact](#contact)
 
 ## Inspiration
 
-### Built With
 
 ## About this Project
+
+### Built With
+* Python
+* Flask
+* Sqlite
+* Jinja
+* BeautifulSoup
+* Pandas
+* Selenium
+* Heroku
 
 ## Images
 
 ## Acknowledgements
-Special thanks to <a href="https://github.com/jinocenc" target="_blank">jinocenc</a> for providing HTML and CSS consulting
+Special thanks to Jerold Inocencio (GitHub [jinocenc](https://github.com/jinocenc)) for providing HTML and CSS consulting
 
 ## Contact
-Taisei Tateno - tjt@berkeley.edu
+Name: Taisei Tateno <br>
+Email: tjt@berkeley.edu <br>
+Personal Website: https://taiseit.github.io/#
