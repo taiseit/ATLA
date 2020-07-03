@@ -31,4 +31,4 @@ Special thanks to Jerold Inocencio (GitHub [jinocenc](https://github.com/jinocen
 ## Contact
 Name: Taisei Tateno <br>
 Email: tjt@berkeley.edu <br>
-Personal Website: https://taiseit.github.io/#
+Personal Website: https://taiseit.github.io
