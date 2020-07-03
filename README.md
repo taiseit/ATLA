@@ -2,12 +2,15 @@
 
 ## Table of Contents
 * [Inspiration](#inspiration)
-* [About this Project](#about)
+  * [Built With](#built-with)
+* [About this Project](#about-this-project)
 * [Images](#images)
 * [Acknowledgments](#acknowledgements)
 * [Contact](#contact)
 
 ## Inspiration
+
+### Built With
 
 ## About this Project
 
