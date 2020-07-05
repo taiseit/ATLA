@@ -85,7 +85,7 @@ div p {
     opacity: 0.0;
     animation: fadeIn ease 2s;
     -webkit-animation: fadeIn ease 2s;
-    animation-fill-mode: forwards;  
+    animation-fill-mode: forwards; 
     }
     
     @keyframes fadeIn {
