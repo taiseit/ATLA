@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+* <a href="https://atlaquotes.herokuapp.com">View the app here</a>
 * [About the Project](#about-the-project)
   * [Inspiration](#inspiration)
   * [Built With](#built-with)
@@ -14,8 +15,7 @@
 ## About the Project
 
 ### Inspiration
-
-View the deployed app <a href="https://atlaquotes.herokuapp.com">here</a>
+Although the Covid 19 Pandemic has been a challenging and unusual time for us all, one of the few positives that has emerged through it all was being introduced to Avatar: The Last Airbender for the first time when my sisters started rewatching it on Netflix. Each evening my family and I would gather in the living room with snacks and blankets to watch a few episodes, and share the Avatar-inspired content that we had discovered on instagram and reddit earlier in the day. Being able to experience such a masterpiece together with my family was a special experience, and one that I'll always look back fondly on now that it has passed. This project is dedicated to all the fans of ATLA (except fans of the movie, sorry).
 
 ### Built With
 * Python
@@ -29,7 +29,7 @@ View the deployed app <a href="https://atlaquotes.herokuapp.com">here</a>
 * Heroku
 
 ### How it Works
-The <a href="https://animemotivation.com/avatar-the-last-airbender-quotes/">target website</a> was first scraped using Selenium and its HTML was parsed using BeautifulSoup. Pandas was used to insert the text and author of each quote into series and create a dataframe. A csv of the dataframe was then generated and imported into an Sqlite database. Both Python and the micro web framework Flask were utilized to develop the application logic and structure, and the quotes were queried using SQLAlchemy methods. The quotes were then displayed on the frontend (HTML & CSS) using Jinja. Finallym, Heroku was used to deploy the application. <br>
+The <a href="https://animemotivation.com/avatar-the-last-airbender-quotes/">target website</a> was first scraped using Selenium and its HTML was parsed using BeautifulSoup. Pandas was used to insert the text and author of each quote into series and create a dataframe. A csv of the dataframe was then generated and imported into an Sqlite database. Both Python and the micro web framework Flask were utilized to develop the application logic and structure. The quotes were queried from the database using SQLAlchemy methods, and displayed on the frontend (HTML & CSS) using Jinja. Finally, the application was deployed on Heroku. <br>
 View the deployed app <a href="https://atlaquotes.herokuapp.com">here</a>
 
 ### Future Iterations
@@ -42,7 +42,7 @@ View the deployed app <a href="https://atlaquotes.herokuapp.com">here</a>
 
 ## Acknowledgements
 * Special thanks to Jerold Inocencio (GitHub [jinocenc](https://github.com/jinocenc)) for providing HTML and CSS consulting
-* Many thanks to <a href="https://www.reddit.com/r/TheLastAirbender/">r/TheLastAirbender</a> for continual inspiration
+* Many thanks to <a href="https://www.reddit.com/r/TheLastAirbender/">r/TheLastAirbender</a> for the continual inspiration
 
 ## Contact
 Name: Taisei Tateno <br>
