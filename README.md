@@ -47,4 +47,4 @@ View the deployed app <a href="https://atlaquotes.herokuapp.com">here</a>
 ## Contact
 Name: Taisei Tateno <br>
 Personal Website: https://taiseit.github.io <br> 
-Email: tjt@berkeley.edu <br>
+Email:  tjt (at) berkeley (dot) edu  <br>
