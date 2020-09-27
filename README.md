@@ -37,9 +37,9 @@ View the deployed app <a href="https://atlaquotes.herokuapp.com">here</a>
 * An ATLA Quote of the Day Chrome extension is currently being considered for development
 
 ## Images
-<img src="static/images/app.jpg" width="375" height="500"></img> <br>
-![](static/images/app.gif)
-
+![](static/images/app.gif) <br>
+<img src="static/images/app.jpg" width="375" height="500"></img>
+ 
 ## Acknowledgements
 * Special thanks to Jerold Inocencio (GitHub [jinocenc](https://github.com/jinocenc)) for providing HTML and CSS consulting
 * Many thanks to <a href="https://www.reddit.com/r/TheLastAirbender/">r/TheLastAirbender</a> for the continual inspiration
